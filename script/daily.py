@@ -5,7 +5,9 @@ from datetime import datetime
 from shutil import move
 from git import Repo
 
-os.chdir("../data")
+print(os.getcwd())
+
+os.chdir("bachelor_arbeit/data")
 
 source_dir = os.getcwd()
 
