@@ -5,7 +5,7 @@ from datetime import datetime
 from shutil import move
 from git import Repo
 
-os.chdir("bachelor_arbeit")
+os.chdir("../data")
 
 source_dir = os.getcwd()
 
@@ -23,6 +23,7 @@ for file_name in file_names:
 if no_files_found:
 	os.rmdir(folder_name)
 else:
+	os.chdir("..")
 	repo = Repo(".git")
 	repo.git.add('.')
 	repo.index.commit(folder_name)
